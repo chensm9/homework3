@@ -1,207 +1,191 @@
+/*辅助线*/
+/*#at-plus-container div {
+  border: 1px solid blue;
+}*/
+
+/*大布局定位*/
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#at-plus-container {
+  position: relative;
+  width: 180px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: lightgray;  辅助背景色*/
+}
 
 #bottom-positioner {
   position: absolute;
-  width:560px;
-  height: 900px;
-  overflow: hidden;  /* Include all the element */
-  left: 20%;
-  bottom: 15%;
+  bottom: 0;
+  width: 100%;
 }
+
+/*细节*/
 #info-bar {
-  background-color: #666666;
-  width: 10px;
-  height: 10px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  bottom: 97px;
+  left: 77px;
   border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  bottom: 9%;
+  background-color: #7E7E7E;
+  transition: all 0.5s;
   opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  overflow: hidden;
 }
-#button:hover #info-bar{
-  background-color: #666666;
-  width: 120px;
-  height: 120px;
+
+#button:hover #info-bar {
+  width: 130px;
+  height: 130px;
+  bottom: 150px;
+  left: 25px;
   border-radius: 50%;
-  position: absolute;
-  left: 42%;
-  bottom: 15%;
+  background-color: #7E7E7E;
   opacity: 1;
 }
-#button:hover .user span {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 20px;
+
+#info-bar ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#info-bar li {
+  list-style: none;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: 0px;
   color: white;
-  opacity: 1;
 }
-#button:hover .comment span {
+
+#info-bar li img {
+  vertical-align: middle;
+}
+
+#info-bar li span {
+  margin-left: 8px;
+}
+
+#info-bar li.mine {
   display: inline-block;
-  margin-left: 10px;
-  font-size: 35px;
-  color: white;
-  opacity: 1;
+  width: 50%;
+  color: #26E79E;
+  box-sizing: border-box;
 }
-.user {
+
+#info-bar li.posted {
+  padding-left: 15px;
+}
+
+#info-bar li.comment {
+  font-size: 30px;
+}
+
+#control-ring-container {
   position: absolute;
-  top:10px;
-}
-.user span {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 0;
-  color: white;
-  transition: all 0.5s ease-out 250ms;
-  opacity: 0;
-}
-.comment {
-  position: absolute;
-  top: 35px;
-  left: 30px;
-}
-.comment span {
-  display: inline-block;
-  margin-left: 10px;
-  font-size: 0px;
-  color: white;
-  transition: all 0.5s ease-out 250ms;
-  opacity: 0;
-}
-.mine {
-  display: inline-block;
-}
-.mine span {
-  position: absolute;
-  display: inline-block;
-  margin-left: 5px;
-  color: #079E6E;
-  bottom: 7px;
-}
-.posted {
-  position: absolute;
-  top:75px;
-  left: 20px;
-}
-.like {
-  position: absolute;
-  top: 75px;
-  left:60px;
-}
-.button {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  padding: 5px;
-}
-.mask {
-  background: url(assets/images/nomask.png) no-repeat 50% 50% #666666;
-  left: 50%;
-  bottom: 9%;
-  opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  background-size: 0%;
-}
-#button:hover .mask {
-  background: url(assets/images/nomask.png) no-repeat 50% 50% #666666;
-  background-size: 50%;
-  left: 37%;
-  bottom: 14%;
-  opacity: 1;
-}
-.history {
-  background: url(assets/images/history.png) no-repeat 50% 50% #666666;
-  left: 50%;
-  bottom: 9%;
-  opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  background-size: 0%;
-}
-#button:hover .history {
-  background: url(assets/images/history.png) no-repeat 50% 50% #666666;
-  background-size: 50%;
-  left: 35%;
-  bottom: 9%;
-  opacity: 1;
-}
-.message {
-  background: url(assets/images/message.png) no-repeat 50% 50% #666666;
-  left: 50%;
-  bottom: 9%;
-  opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  background-size: 0%;
-}
-#button:hover .message {
-  background: url(assets/images/message.png) no-repeat 50% 50% #666666;
-  background-size: 50%;
-  left: 38%;
-  bottom: 4%;
-  opacity: 1;
-}
-.unread {
-  display: inline-block;
-  position: absolute;
-  left:24px;
+  width: 180px;
+  height: 180px;
   bottom: 20px;
-  background-color: red;
+  left: 0px;
   border-radius: 50%;
+}
+
+#control-ring-container li {
+  list-style: none;
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: 60px;
+  margin-left: 35px;
+  border-radius: 50%;
+  background: #686868 center no-repeat;
+  background-size: 18px 18px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+#button:hover #control-ring li {
+  opacity: 1;
+}
+
+#button:hover #control-ring li:nth-child(1) {
+  margin-top: 20px;
+  margin-left: -30px;
+  background-image: url(assets/images/nomask.png);
+}
+
+#button:hover #control-ring li:nth-child(2) {
+  margin-top: 60px;
+  margin-left: -40px;
+  background-image: url(assets/images/history.png);
+}
+
+#button:hover #control-ring li:nth-child(3) {
+  margin-top: 102px;
+  margin-left: -26px;
+  background-image: url(assets/images/message.png);
+  opacity: 1;
+}
+
+#control-ring li span.unread {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  display: block;
   width: 20px;
   height: 20px;
-  line-height: 20px;
-  text-align: center;
-  transition: all 0.5s ease-out 250ms;
-  color: white;
-}
-.setting {
-  background: url(assets/images/setting.png) no-repeat 50% 50% #666666;
-  left: 50%;
-  bottom: 9%;
-  opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  background-size: 0%;
-}
-#button:hover .setting {
-  background: url(assets/images/setting.png) no-repeat 50% 50% #666666;
-  background-size: 50%;
-  left: 46%;
-  bottom: 1%;
-  opacity: 1;
-}
-.sign {
-  background: url(assets/images/signin.png) no-repeat 50% 50% #666666;
-  left: 50%;
-  bottom: 9%;
-  opacity: 0;
-  transition: all 0.5s ease-out 250ms;
-  background-size: 0%;
-}
-#button:hover .sign {
-  background: url(assets/images/signin.png) no-repeat 50% 50% #666666;
-  background-size: 50%;
-  left: 56%;
-  bottom: 2%;
-  opacity: 1;
-}
-.apb {
-  position: absolute;
-  background: url(assets/images/atplus_white.png) no-repeat 50% 50% #7171C6;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
   border-radius: 50%;
-  left:50%;
-  bottom: 9%;
-  opacity: 0.5;
+  background-color: red;
+  color: #EBD6DC;
+  text-align: center;
+  box-sizing: border-box;
 }
-#button:hover .apb{
-  background: url(assets/images/atplus_green.png) no-repeat 50% 50% rgba(48, 63, 159, 1);
-  background-size: 70%;
-  transform: scale(1.5);
-  transition: all 0.5s ease-in-out 50ms;
-  opacity: 0.8;
+
+#button:hover #control-ring li:nth-child(4) {
+  margin-top: 129px;
+  margin-left: 12px;
+  background-image: url(assets/images/setting.png);
 }
-ul {
-  list-style-type: none;
+
+#button:hover #control-ring li:nth-child(5) {
+  margin-top: 128px;
+  margin-left: 60px;
+  background-image: url(assets/images/signin.png);
+}
+
+#button {
+  width: 70px;
+  height: 70px;
+  margin: 75px 55px;
+}
+
+#button .apb {
+  position: absolute;
+  width:26px;
+  height: 26px;
+  bottom: 97px;
+  left: 77px;
+  border-radius: 50%;
+  background: url(assets/images/atplus_white.png) center no-repeat;
+  background-size: 20px 15px;
+  background-color: #989FCF;
+  transition: all 0.5s;
+}
+
+#button:hover .apb {
+  width:50px;
+  height: 50px;
+  bottom: 85px;
+  left: 65px;
+  background: url(assets/images/atplus_green.png) center no-repeat;
+  background-size: 40px 30px;
+  background-color: #303f9f;
 }
