@@ -73,9 +73,13 @@ html, body {
   margin-left: 8px;
 }
 
+#info-bar li.user {
+  height: 22px;
+}
+
 #info-bar li.mine {
   display: inline-block;
-  width: 50%;
+  width: 45%;
   color: #26E79E;
   box-sizing: border-box;
 }
@@ -85,6 +89,7 @@ html, body {
 }
 
 #info-bar li.comment {
+  height: 34px;
   font-size: 30px;
 }
 
@@ -159,12 +164,6 @@ html, body {
   margin-top: 128px;
   margin-left: 60px;
   background-image: url(assets/images/signin.png);
-}
-
-#button {
-  width: 70px;
-  height: 70px;
-  margin: 75px 55px;
 }
 
 #button .apb {
